@@ -7,7 +7,12 @@ export default class Table extends Component {
     return (
       <table>
         <TableHeader />
-        <TableBody characters={this.props.characters} />
+        <TableBody
+          characters={this.props.characters}
+          removeCharacter={this.props.removeCharacter}
+          editCharacter={this.props.editCharacter}
+          toggleEdit={this.props.toggleEdit}
+        />
       </table>
     )
   }

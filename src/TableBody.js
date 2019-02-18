@@ -8,6 +8,12 @@ export default function TableBody(props) {
           <tr key={i}>
             <td>{char.name}</td>
             <td>{char.job}</td>
+            <td>
+              <button onClick={() => props.removeCharacter(i)}>Delete</button>
+            </td>
+            <td>
+              <button onClick={() => props.toggleEdit(i)}>Edit</button>
+            </td>
           </tr>
         )
       })}
