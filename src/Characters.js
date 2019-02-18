@@ -1,7 +1,7 @@
 export const characters = [
   {
     name: 'Charlie',
-    job: 'janitor'
+    job: 'Janitor'
   },
   {
     name: 'T-Shawn',
