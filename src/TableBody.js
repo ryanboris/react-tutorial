@@ -16,7 +16,6 @@ export default function TableBody() {
               </button>
             </td>
             <td>
-              {' '}
               <button onClick={() => dispatch({ type: 'EDIT' })}>Edit</button>
             </td>
           </tr>

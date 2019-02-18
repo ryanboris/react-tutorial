@@ -1,9 +1,8 @@
 import React, { useContext, useReducer } from 'react'
 import Table from './Table'
+import Form from './Form'
 import CharactersContext from './context'
 import reducer from './reducer'
-
-import './index.css'
 
 export default function App() {
   const initialState = useContext(CharactersContext)
@@ -11,6 +10,7 @@ export default function App() {
   return (
     <CharactersContext.Provider value={{ state, dispatch }}>
       <Table />
+      <Form />
     </CharactersContext.Provider>
   )
 }
