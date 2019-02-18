@@ -19,7 +19,7 @@ export default function Form() {
     <form onSubmit={handleSubmit}>
       <NameInput />
       <JobInput />
-      <input type="submit" value="submit" />
+      <input type="submit" value={state.isEditing ? 'Update' : 'Submit'} />
     </form>
   )
 }
