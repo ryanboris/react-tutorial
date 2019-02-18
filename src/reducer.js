@@ -19,6 +19,23 @@ export default function reducer(state, action) {
         jobInput: ''
       }
 
+    case 'EDIT':
+      if (!action.payload.name || !action.payload.job) {
+        return state
+      }
+      return {
+        ...state,
+        characters: [
+          ...characters.slice(0, state.editIndex),
+          { name: state.nameInput, job: state.jobInput },
+          ...characters.slice(state.editIndex + 1)
+        ],
+        isEditing: false,
+        editIndex: null,
+        nameInput: '',
+        jobInput: ''
+      }
+
     case 'CURRENT_NAME':
       return {
         ...state,
@@ -29,6 +46,13 @@ export default function reducer(state, action) {
       return {
         ...state,
         jobInput: action.payload
+      }
+
+    case 'IS_EDITING':
+      return {
+        ...state,
+        isEditing: true,
+        editIndex: action.payload
       }
 
     default:

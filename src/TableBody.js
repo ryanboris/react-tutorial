@@ -16,7 +16,9 @@ export default function TableBody() {
               </button>
             </td>
             <td>
-              <button onClick={() => dispatch({ type: 'EDIT' })}>Edit</button>
+              <button onClick={() => dispatch({ type: 'IS_EDITING', payload: i })}>
+                Edit
+              </button>
             </td>
           </tr>
         )

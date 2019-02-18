@@ -6,7 +6,8 @@ const CharactersContext = React.createContext({
   currentCharacter: '',
   isEditing: false,
   nameInput: '',
-  jobInput: ''
+  jobInput: '',
+  editIndex: null
 })
 
 export default CharactersContext
