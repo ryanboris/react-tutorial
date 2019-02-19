@@ -15,8 +15,6 @@ export default function Form() {
     }
   }
 
-  useEffect(() => {})
-
   return (
     <form onSubmit={handleSubmit}>
       <NameInput />
